@@ -1,0 +1,2 @@
+[cli mode]
+php cli.php request_uri="/command/test/index"
