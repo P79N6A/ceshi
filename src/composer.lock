@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0b6a0f37ac4e06e6349da4a8bfb0213",
-    "content-hash": "31fc04efe88fbfc99beafa2fadbd3ed8",
+    "hash": "cc1fde19478518518dd8094e1fb3c7d9",
+    "content-hash": "e5bc1f3f071e9b685f7c89b4537a8146",
     "packages": [
         {
             "name": "apache/log4php",
@@ -24,7 +24,7 @@
                     "src/main/php/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -72,7 +72,7 @@
                     "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
                 }
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -90,6 +90,139 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "emanueleminotto/simple-html-dom",
+            "version": "1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EmanueleMinotto/simple-html-dom.git",
+                "reference": "09b7f3ad5b62d1cc3dfc2d326845e73d2cdc2819"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EmanueleMinotto/simple-html-dom/zipball/09b7f3ad5b62d1cc3dfc2d326845e73d2cdc2819",
+                "reference": "09b7f3ad5b62d1cc3dfc2d326845e73d2cdc2819",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "simple_html_dom.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "S.C. Chen",
+                    "email": "me578022@gmail.com"
+                },
+                {
+                    "name": "Emanuele Minotto",
+                    "email": "minottoemanuele@gmail.com"
+                }
+            ],
+            "description": "PHP Simple HTML DOM Parser",
+            "time": "2015-08-31 00:31:29"
+        },
+        {
+            "name": "florianv/snoop",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/florianv/snoop.git",
+                "reference": "584fd4e6daad54899f1671fefea486f4ba58e48b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/florianv/snoop/zipball/584fd4e6daad54899f1671fefea486f4ba58e48b",
+                "reference": "584fd4e6daad54899f1671fefea486f4ba58e48b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "guzzle/guzzle": "~3.0",
+                "phpunit/phpunit": "~3.7"
+            },
+            "suggest": {
+                "guzzle/guzzle": "If you want to use the Guzzle3Adapter",
+                "guzzlehttp/guzzle": "If you want to use the Guzzle4Adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Snoop": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Voutzinos",
+                    "email": "florian@voutzinos.com",
+                    "homepage": "http://florian.voutzinos.com"
+                }
+            ],
+            "description": "Find informations about an email address owner",
+            "homepage": "https://github.com/florianv/snoop",
+            "keywords": [
+                "contact",
+                "email",
+                "information",
+                "profile",
+                "social"
+            ],
+            "time": "2014-06-13 23:47:40"
+        },
+        {
+            "name": "naux/iplocation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NauxLiu/IpLocation.git",
+                "reference": "637d1df00fe6edaf8bd636190986a20d6f381ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NauxLiu/IpLocation/zipball/637d1df00fe6edaf8bd636190986a20d6f381ac0",
+                "reference": "637d1df00fe6edaf8bd636190986a20d6f381ac0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Naux\\IpLocation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "NauxLiu",
+                    "email": "xuancoder@gmail.com",
+                    "homepage": "http://naux.me"
+                },
+                {
+                    "name": "joyphper",
+                    "homepage": "http://joyphper.net"
+                }
+            ],
+            "description": "基于纯真IP库的,查询IP归属地PHP库",
+            "time": "2014-11-21 16:14:45"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -128,7 +261,7 @@
                     ]
                 }
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -173,7 +306,7 @@
                     "Prophecy\\": "src/"
                 }
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -242,7 +375,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -290,7 +423,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -332,7 +465,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -373,7 +506,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -423,7 +556,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -442,16 +575,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.21",
+            "version": "4.8.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ea76b17bced0500a28098626b84eda12dbcf119c"
+                "reference": "dfb11aa5236376b4fc63853cf746af39fe780e72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ea76b17bced0500a28098626b84eda12dbcf119c",
-                "reference": "ea76b17bced0500a28098626b84eda12dbcf119c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/dfb11aa5236376b4fc63853cf746af39fe780e72",
+                "reference": "dfb11aa5236376b4fc63853cf746af39fe780e72",
                 "shasum": ""
             },
             "require": {
@@ -510,7 +643,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-12-12 07:45:58"
+            "time": "2016-02-02 09:01:21"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -549,7 +682,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -601,7 +734,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -766,7 +899,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -834,7 +967,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -924,7 +1057,7 @@
                     "src/"
                 ]
             },
-            "notification-url": "http://packagist.cn/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -940,17 +1073,97 @@
             "time": "2015-06-21 13:59:46"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v3.0.1",
+            "name": "simplon/mysql",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "3df409958a646dad2bc5046c3fb671ee24a1a691"
+                "url": "https://github.com/fightbulc/simplon_mysql.git",
+                "reference": "f30caf51251122a29b95bcff1695f44101719023"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/3df409958a646dad2bc5046c3fb671ee24a1a691",
-                "reference": "3df409958a646dad2bc5046c3fb671ee24a1a691",
+                "url": "https://api.github.com/repos/fightbulc/simplon_mysql/zipball/f30caf51251122a29b95bcff1695f44101719023",
+                "reference": "f30caf51251122a29b95bcff1695f44101719023",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Simplon\\Mysql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me",
+                    "role": "developer"
+                }
+            ],
+            "description": "Simplon MySQL Library",
+            "homepage": "https://github.com/fightbulc/simplon_mysql",
+            "keywords": [
+                "db",
+                "manager",
+                "mysql",
+                "pdo"
+            ],
+            "time": "2015-12-15 16:31:26"
+        },
+        {
+            "name": "snoopy/snoopy",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PheRum/snoopy.git",
+                "reference": "660134bc1cfd52c00ded91928320dd4e775ff4d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PheRum/snoopy/zipball/660134bc1cfd52c00ded91928320dd4e775ff4d9",
+                "reference": "660134bc1cfd52c00ded91928320dd4e775ff4d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Snoopy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Zmievski"
+                }
+            ],
+            "description": "snoopy",
+            "time": "2015-07-25 20:02:14"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "25d01edb35f3d5902f612eff297385e9b4d9a8b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/25d01edb35f3d5902f612eff297385e9b4d9a8b4",
+                "reference": "25d01edb35f3d5902f612eff297385e9b4d9a8b4",
                 "shasum": ""
             },
             "require": {
@@ -959,7 +1172,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -986,13 +1199,134 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-12-26 13:39:53"
+            "time": "2016-01-22 06:37:40"
+        },
+        {
+            "name": "zf1/zend-db",
+            "version": "1.12.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zf1/zend-db.git",
+                "reference": "67a2a05a0dce937a88af4d5d1267261db700c159"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zf1/zend-db/zipball/67a2a05a0dce937a88af4d5d1267261db700c159",
+                "reference": "67a2a05a0dce937a88af4d5d1267261db700c159",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.11",
+                "zf1/zend-exception": "self.version",
+                "zf1/zend-loader": "self.version"
+            },
+            "suggest": {
+                "zf1/zend-registry": "Used in special situations or with special adapters",
+                "zf1/zend-wildfire": "Used in special situations or with special adapters"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zend_Db": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1 Db package",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "ZF1",
+                "db",
+                "framework",
+                "zend"
+            ],
+            "time": "2015-04-30 11:09:54"
+        },
+        {
+            "name": "zf1/zend-exception",
+            "version": "1.12.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zf1/zend-exception.git",
+                "reference": "ca30959d3e2f522f481a3d1459386acf1aa4ca74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zf1/zend-exception/zipball/ca30959d3e2f522f481a3d1459386acf1aa4ca74",
+                "reference": "ca30959d3e2f522f481a3d1459386acf1aa4ca74",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.11"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zend_Exception": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1 Exception package",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "ZF1",
+                "exception",
+                "framework",
+                "zend"
+            ],
+            "time": "2015-04-30 11:10:20"
+        },
+        {
+            "name": "zf1/zend-loader",
+            "version": "1.12.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zf1/zend-loader.git",
+                "reference": "42c49c862bf095bdd64e9f1728cb04051c2c2abe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zf1/zend-loader/zipball/42c49c862bf095bdd64e9f1728cb04051c2c2abe",
+                "reference": "42c49c862bf095bdd64e9f1728cb04051c2c2abe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.11",
+                "zf1/zend-exception": "self.version"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zend_Loader": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1 Loader package",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "ZF1",
+                "framework",
+                "loader",
+                "zend"
+            ],
+            "time": "2015-04-30 11:07:31"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "naux/iplocation": 20,
+        "symfony/yaml": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
