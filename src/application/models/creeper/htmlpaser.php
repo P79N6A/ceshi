@@ -60,9 +60,16 @@ class htmlpaser extends CI_Model
                     $ret[] = $element->plaintext;
                 }
             }
+            if(empty($ret)){
+                continue;
+            }
             $this->title = $html->find('title', 0)->plaintext;
             $this->download_url = json_encode($ret);
-            $this->category = $html->find('div[class=path]', 0)->plaintext;
+            $cate_el = $html->find('div[class=path]', 0);
+            if(empty($cate_el)){
+                continue;
+            }
+            $this->category = $cate_el->plaintext;
             if (!empty($this->title) && !empty($this->download_url) && !empty($this->category)) {
                 $data = array(
                     'title' => trim($this->title),
