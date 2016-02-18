@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:80
--- Generation Time: 2016-02-18 14:06:04
+-- Generation Time: 2016-02-18 19:10:30
 -- 服务器版本： 5.6.26
 -- PHP Version: 5.4.45
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `movies` (
   `id` int(11) NOT NULL COMMENT '主键',
   `title` varchar(50) NOT NULL DEFAULT '' COMMENT '电影名称',
-  `download_url` varchar(255) NOT NULL DEFAULT '' COMMENT '下载地址',
+  `download_url` text COMMENT '下载地址',
   `category` varchar(50) NOT NULL DEFAULT '' COMMENT '电影分类'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -54,7 +54,8 @@ CREATE TABLE IF NOT EXISTS `urls` (
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `title_unique_0` (`title`);
 
 --
 -- Indexes for table `urls`
