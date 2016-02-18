@@ -30,9 +30,12 @@ class downloader extends CI_Model
             foreach ($urls as $url) {
                 $html = read_file($url['url']);
                 write_file($this->path . $url['url_md5'] . '.html', iconv('gbk', 'utf-8', $html));
-                return;
+                $this->is_view = 1;
+                $this->db->update('urls', $this, array('url_md5' => $url['url_md5']));
             }
         }
+
+
 
         return 0;
     }
