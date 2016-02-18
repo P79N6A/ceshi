@@ -18,15 +18,16 @@ class Creeper extends CI_Controller {
 		//开始死循环
 		while($this->url->hasUrls()){
 			//获取urls
-			$urls = $this->url->getUrls();
-			//保存html
-			$this->downloader->saveHtml($urls);
+//			$urls = $this->url->getUrls();
+//			//保存html
+//			$this->downloader->saveHtml($urls);
 			//分析网页并保存
 			$pages = $this->downloader->getHtml();
 			//获取新的url
-			$urls = $this->htmlpaser->paserUrls($pages);
-			$this->url->saveUrls($urls);
+//			$urls = $this->htmlpaser->paserUrls($pages);
+//			$this->url->setUrls($urls);
 			$this->htmlpaser->paserHtml($pages);
+			break;
 		}
 		echo 'done';
 		exit();

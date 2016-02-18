@@ -45,7 +45,8 @@ class url extends CI_Model
      * 是否有可用爬取url
      * @return bool
      */
-    public function hasUrls(){
+    public function hasUrls()
+    {
         if ($this->getUrls()) {
             return true;
         }
@@ -56,7 +57,8 @@ class url extends CI_Model
      * 获取url
      * @return mixed
      */
-    public function getUrls(){
+    public function getUrls()
+    {
         $query = $this->db->get_where('urls', array('is_view' => 0));
         return $query->result_array();
     }
@@ -66,13 +68,27 @@ class url extends CI_Model
      * @param $url
      * @return bool
      */
-    public function setUrls($url){
-        $this->url = $url;
-        $this->url_md5 = md5($url);
-        $query = $this->db->get_where('urls', array('url_md5' => $this->url_md5), 1);
-        if (!$query->result()) {
-            return $this->db->insert('urls', $this);
+    public function setUrls($url)
+    {
+        if (is_array($url)) {
+            foreach ($url as $u) {
+                $this->url = $u;
+                $this->url_md5 = md5($u);
+                $query = $this->db->get_where('urls', array('url_md5' => $this->url_md5), 1);
+                if (!$query->result()) {
+                    $this->db->insert('urls', $this);
+                }
+            }
+            return true;
+        } else {
+            $this->url = $url;
+            $this->url_md5 = md5($url);
+            $query = $this->db->get_where('urls', array('url_md5' => $this->url_md5), 1);
+            if (!$query->result()) {
+                return $this->db->insert('urls', $this);
+            }
+            return false;
         }
-        return false;
+
     }
 }
