@@ -4,7 +4,7 @@
  * Class Url_model
  * url model
  */
-class Url_model extends CI_Model
+class downloader extends CI_Model
 {
 
     public function __construct()

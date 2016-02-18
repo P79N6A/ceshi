@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc1fde19478518518dd8094e1fb3c7d9",
-    "content-hash": "e5bc1f3f071e9b685f7c89b4537a8146",
+    "hash": "80483508efa73c430134c973cd7b76b4",
+    "content-hash": "df03a11b1cbb9eae0ad6ed39be4cb455",
     "packages": [
         {
             "name": "apache/log4php",
@@ -129,102 +129,6 @@
             "time": "2015-08-31 00:31:29"
         },
         {
-            "name": "florianv/snoop",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/florianv/snoop.git",
-                "reference": "584fd4e6daad54899f1671fefea486f4ba58e48b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/florianv/snoop/zipball/584fd4e6daad54899f1671fefea486f4ba58e48b",
-                "reference": "584fd4e6daad54899f1671fefea486f4ba58e48b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "guzzle/guzzle": "~3.0",
-                "phpunit/phpunit": "~3.7"
-            },
-            "suggest": {
-                "guzzle/guzzle": "If you want to use the Guzzle3Adapter",
-                "guzzlehttp/guzzle": "If you want to use the Guzzle4Adapter"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Snoop": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Florian Voutzinos",
-                    "email": "florian@voutzinos.com",
-                    "homepage": "http://florian.voutzinos.com"
-                }
-            ],
-            "description": "Find informations about an email address owner",
-            "homepage": "https://github.com/florianv/snoop",
-            "keywords": [
-                "contact",
-                "email",
-                "information",
-                "profile",
-                "social"
-            ],
-            "time": "2014-06-13 23:47:40"
-        },
-        {
-            "name": "naux/iplocation",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/NauxLiu/IpLocation.git",
-                "reference": "637d1df00fe6edaf8bd636190986a20d6f381ac0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/NauxLiu/IpLocation/zipball/637d1df00fe6edaf8bd636190986a20d6f381ac0",
-                "reference": "637d1df00fe6edaf8bd636190986a20d6f381ac0",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Naux\\IpLocation\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "NauxLiu",
-                    "email": "xuancoder@gmail.com",
-                    "homepage": "http://naux.me"
-                },
-                {
-                    "name": "joyphper",
-                    "homepage": "http://joyphper.net"
-                }
-            ],
-            "description": "基于纯真IP库的,查询IP归属地PHP库",
-            "time": "2014-11-21 16:14:45"
-        },
-        {
             "name": "phpdocumentor/reflection-docblock",
             "version": "2.0.4",
             "source": {
@@ -275,22 +179,24 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7"
+                "reference": "3c91bdf81797d725b14cb62906f9a4ce44235972"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4745ded9307786b730d7a60df5cb5a6c43cf95f7",
-                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3c91bdf81797d725b14cb62906f9a4ce44235972",
+                "reference": "3c91bdf81797d725b14cb62906f9a4ce44235972",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
+                "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "~2.0",
-                "sebastian/comparator": "~1.1"
+                "sebastian/comparator": "~1.1",
+                "sebastian/recursion-context": "~1.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "~2.0"
@@ -298,7 +204,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -331,7 +237,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-08-13 10:07:40"
+            "time": "2016-02-15 07:46:21"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -575,16 +481,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.22",
+            "version": "4.8.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "dfb11aa5236376b4fc63853cf746af39fe780e72"
+                "reference": "6e351261f9cd33daf205a131a1ba61c6d33bd483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/dfb11aa5236376b4fc63853cf746af39fe780e72",
-                "reference": "dfb11aa5236376b4fc63853cf746af39fe780e72",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6e351261f9cd33daf205a131a1ba61c6d33bd483",
+                "reference": "6e351261f9cd33daf205a131a1ba61c6d33bd483",
                 "shasum": ""
             },
             "require": {
@@ -643,7 +549,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-02-02 09:01:21"
+            "time": "2016-02-11 14:56:33"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1073,51 +979,6 @@
             "time": "2015-06-21 13:59:46"
         },
         {
-            "name": "simplon/mysql",
-            "version": "1.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fightbulc/simplon_mysql.git",
-                "reference": "f30caf51251122a29b95bcff1695f44101719023"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fightbulc/simplon_mysql/zipball/f30caf51251122a29b95bcff1695f44101719023",
-                "reference": "f30caf51251122a29b95bcff1695f44101719023",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pdo": "*",
-                "php": ">=5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Simplon\\Mysql\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tino Ehrich",
-                    "email": "tino@bigpun.me",
-                    "role": "developer"
-                }
-            ],
-            "description": "Simplon MySQL Library",
-            "homepage": "https://github.com/fightbulc/simplon_mysql",
-            "keywords": [
-                "db",
-                "manager",
-                "mysql",
-                "pdo"
-            ],
-            "time": "2015-12-15 16:31:26"
-        },
-        {
             "name": "snoopy/snoopy",
             "version": "2.0",
             "source": {
@@ -1154,16 +1015,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "dev-master",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "25d01edb35f3d5902f612eff297385e9b4d9a8b4"
+                "reference": "3cf0709d7fe936e97bee9e954382e449003f1d9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/25d01edb35f3d5902f612eff297385e9b4d9a8b4",
-                "reference": "25d01edb35f3d5902f612eff297385e9b4d9a8b4",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/3cf0709d7fe936e97bee9e954382e449003f1d9a",
+                "reference": "3cf0709d7fe936e97bee9e954382e449003f1d9a",
                 "shasum": ""
             },
             "require": {
@@ -1172,7 +1033,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1199,134 +1060,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-22 06:37:40"
-        },
-        {
-            "name": "zf1/zend-db",
-            "version": "1.12.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zf1/zend-db.git",
-                "reference": "67a2a05a0dce937a88af4d5d1267261db700c159"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf1/zend-db/zipball/67a2a05a0dce937a88af4d5d1267261db700c159",
-                "reference": "67a2a05a0dce937a88af4d5d1267261db700c159",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.11",
-                "zf1/zend-exception": "self.version",
-                "zf1/zend-loader": "self.version"
-            },
-            "suggest": {
-                "zf1/zend-registry": "Used in special situations or with special adapters",
-                "zf1/zend-wildfire": "Used in special situations or with special adapters"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zend_Db": "library/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Zend Framework 1 Db package",
-            "homepage": "http://framework.zend.com/",
-            "keywords": [
-                "ZF1",
-                "db",
-                "framework",
-                "zend"
-            ],
-            "time": "2015-04-30 11:09:54"
-        },
-        {
-            "name": "zf1/zend-exception",
-            "version": "1.12.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zf1/zend-exception.git",
-                "reference": "ca30959d3e2f522f481a3d1459386acf1aa4ca74"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf1/zend-exception/zipball/ca30959d3e2f522f481a3d1459386acf1aa4ca74",
-                "reference": "ca30959d3e2f522f481a3d1459386acf1aa4ca74",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.11"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zend_Exception": "library/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Zend Framework 1 Exception package",
-            "homepage": "http://framework.zend.com/",
-            "keywords": [
-                "ZF1",
-                "exception",
-                "framework",
-                "zend"
-            ],
-            "time": "2015-04-30 11:10:20"
-        },
-        {
-            "name": "zf1/zend-loader",
-            "version": "1.12.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zf1/zend-loader.git",
-                "reference": "42c49c862bf095bdd64e9f1728cb04051c2c2abe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf1/zend-loader/zipball/42c49c862bf095bdd64e9f1728cb04051c2c2abe",
-                "reference": "42c49c862bf095bdd64e9f1728cb04051c2c2abe",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.11",
-                "zf1/zend-exception": "self.version"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zend_Loader": "library/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Zend Framework 1 Loader package",
-            "homepage": "http://framework.zend.com/",
-            "keywords": [
-                "ZF1",
-                "framework",
-                "loader",
-                "zend"
-            ],
-            "time": "2015-04-30 11:07:31"
+            "time": "2016-02-02 13:44:19"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "naux/iplocation": 20,
-        "symfony/yaml": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

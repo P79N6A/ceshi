@@ -9,12 +9,12 @@ class Creeper extends CI_Controller {
 	 */
 	public function dytt($start_url = 'http://dytt8.net/'){
 		//初试变量
-		$this->load->model('creeper/urler_model');
-		$this->load->model('creeper/downloader_model');
-		$this->load->model('creeper/htmlpaser_model');
+		$this->load->model('creeper/url');
+		$this->load->model('creeper/downloader');
+		$this->load->model('creeper/htmlpaser');
 
 		//通过初试链接获取合法爬取地址
-		$this->urler_model->init($start_url);
+		$this->url->init($start_url);
 		//开始死循环
 		while($this->urler_model->hasUrls()){
 			//获取urls
