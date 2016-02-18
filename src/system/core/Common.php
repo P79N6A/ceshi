@@ -849,3 +849,25 @@ if ( ! function_exists('function_usable'))
 		return FALSE;
 	}
 }
+
+
+// ------------------------------------------------------------------------
+
+if (!function_exists('get_config_file')) {
+	/**
+	 *
+	 * @param $config_file
+	 * @return null
+	 */
+	function get_config_file($config_file)
+	{
+
+		if (!empty($config_file)) {
+			if (file_exists($file_path = APPPATH . 'config/' . $config_file . '.php')) {
+				require($file_path);
+			}
+		}
+
+		return empty($$config_file) ? null : $$config_file;
+	}
+}

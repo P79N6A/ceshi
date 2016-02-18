@@ -12,7 +12,11 @@ class htmlpaser extends CI_Model
         parent::__construct();
     }
 
-    public function test()
+    /**
+     * 解析html，获取其中的urls
+     * @return string
+     */
+    public function paserUrls()
     {
         return 'hello model.';
     }

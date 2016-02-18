@@ -2,3 +2,4 @@
 .idea/*
 src/vendor/*
 src/logs/*
+src/cache/*

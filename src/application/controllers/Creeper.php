@@ -16,17 +16,17 @@ class Creeper extends CI_Controller {
 		//通过初试链接获取合法爬取地址
 		$this->url->init($start_url);
 		//开始死循环
-		while($this->urler_model->hasUrls()){
+		while($this->url->hasUrls()){
 			//获取urls
-			$urls = $this->urler_model->getUrls();
+			$urls = $this->url->getUrls();
 			//保存html
-			$this->downloader_model->saveHtml($urls);
+			$this->downloader->saveHtml($urls);
 			//分析网页并保存
-			$pages = $this->downloader_model->getHtml();
-			$this->htmlpaser_model->paserHtml($pages);
+			$pages = $this->downloader->getHtml();
 			//获取新的url
-			$urls = $this->htmlpaser_model->paserUrls($pages);
-			$this->urler_model->saveUrls($urls);
+			$urls = $this->htmlpaser->paserUrls($pages);
+			$this->url->saveUrls($urls);
+			$this->htmlpaser->paserHtml($pages);
 		}
 		echo 'done';
 		exit();
