@@ -71,6 +71,7 @@ class htmlpaser extends CI_Model
                 );
                 $this->setMovie($data);
             }
+            unlink($page);
         }
     }
 
