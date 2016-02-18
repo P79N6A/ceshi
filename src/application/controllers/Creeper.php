@@ -34,7 +34,7 @@ class Creeper extends CI_Controller
 
             //获取新的url
             $urls_new = $this->htmlpaser->paserUrls($pages);
-            $this->url->setUrls($urls);
+            $this->url->setUrls($urls_new);
             log_message('debug', 'urls_new count ' . count($urls_new));
             echo "又找到了" . count($urls_new) . "个新的链接地址..." . "\n";
 

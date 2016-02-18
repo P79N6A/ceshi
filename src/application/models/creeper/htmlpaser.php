@@ -63,11 +63,11 @@ class htmlpaser extends CI_Model
             $this->title = $html->find('title', 0)->plaintext;
             $this->download_url = json_encode($ret);
             $this->category = $html->find('div[class=path]', 0)->plaintext;
-            if (!empty($this->title) || !empty($this->download_url) || !empty($this->category)) {
+            if (!empty($this->title) && !empty($this->download_url) && !empty($this->category)) {
                 $data = array(
                     'title' => trim($this->title),
-                    'download_url' => $this->download_url,
-                    'category' => $this->category,
+                    'download_url' => trim($this->download_url),
+                    'category' => trim($this->category),
                 );
                 $this->setMovie($data);
             }
