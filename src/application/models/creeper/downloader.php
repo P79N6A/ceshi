@@ -30,7 +30,9 @@ class downloader extends CI_Model
             foreach ($urls as $key => $url) {
                 echo "正在下载第" . ($key + 1) . "个页面..." . "\n";
                 $html = read_file($url['url']);
-                write_file($this->path . $url['url_md5'] . '.html', iconv('gbk', 'utf-8//IGNORE', $html));
+                if (!file_exists($this->path . $url['url_md5'] . '.html')) {
+                    write_file($this->path . $url['url_md5'] . '.html', iconv('gbk', 'utf-8//IGNORE', $html));
+                }
                 $this->is_view = 1;
                 $this->db->update('urls', $this, array('url_md5' => $url['url_md5']));
             }
