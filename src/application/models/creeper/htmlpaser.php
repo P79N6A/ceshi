@@ -32,10 +32,12 @@ class htmlpaser extends CI_Model
         foreach ($pages as $page) {
             $html->load_file($page);
             foreach ($html->find('a') as $element) {
-                if (strpos($element->href, 'http:') === false) {
-                    $ret[] = 'http://www.ygdy8.net/' . $element->href;
-                } else {
-                    $ret[] = $element->href;
+                if(strpos($element->href, 'ftp:') === false){
+                    if (strpos($element->href, 'http:') === false) {
+                        $ret[] = 'http://www.ygdy8.net/' . $element->href;
+                    } else {
+                        $ret[] = $element->href;
+                    }
                 }
             }
         }

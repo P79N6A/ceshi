@@ -45,5 +45,23 @@ class Creeper extends CI_Controller
         exit();
     }
 
+    public function explode(){
+        $this->load->model('creeper/app');
+        $this->load->helper('file');
+
+        $movies = $this->app->lists();
+        $ftps = '';
+        foreach($movies as $movie){
+            $download_url = json_decode($movie['download_url'], true);
+            if(count($download_url) == 1){
+                $ftps .= $download_url[0] . "\r\n";
+            }
+        }
+        write_file( '/Users/haicheng/developer/wwwroot/ceshi/src/cache/movies.txt', $ftps);
+
+        echo 'done';
+        unset($movies, $ftps);
+    }
+
 
 }
