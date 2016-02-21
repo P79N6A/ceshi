@@ -63,5 +63,14 @@ class Creeper extends CI_Controller
         unset($movies, $ftps);
     }
 
+    public function test(){
+        $urls = array("http://baidu.com", "http://sina.com.cn", "http://sohu.com");
+        $this->load->library('multicurlclass', $urls);
+        $data = $this->multicurlclass->start();
+        echo var_dump($data);
+        //增加多线程下载
+
+    }
+
 
 }

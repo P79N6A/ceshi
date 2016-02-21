@@ -1,92 +1,94 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: haicheng
- * Date: 16/2/19
- * Time: 下午2:52
+/*
+ * Curl 多线程类
+ * 使用方法：
+ * ========================
+	$urls = array("http://baidu.com", "http://dzone.com", "http://google.com");
+	$mp = new MultiHttpRequest($urls);
+	$mp->start();
+ * ========================
+ * 当然，如果你喜欢，还可以对此类进行扩展，
+ * 比如，如果需要用户登录才能采集的数据怎么办？
+ * 只要我们使用 curl 来做伪登录，把 cookie 保存到文件，
+ * 每次请求发送有效的 cookie 即可实现伪登录抓去数据！
  */
+
 class Multicurlclass
 {
-    //一次并发数量
-    private $limit = 2;
+    public $urls = array();
+    public $curlopt_header = 0;
+    public $method = "GET";
 
-    //URL集合
-    private $urls;
-
-    private $timeout = 10;
-
-    private $ret;
-
-    private $url_list = array();
-    private $curl_setopt = array(
-        'CURLOPT_RETURNTRANSFER' => 1,//结果返回给变量
-        'CURLOPT_HEADER' => 0,//是否需要返回HTTP头
-        'CURLOPT_NOBODY' => 0,//是否需要返回的内容
-        'CURLOPT_FOLLOWLOCATION' => 0,//自动跟踪
-        'CURLOPT_TIMEOUT' => 6//超时时间(s)
-    );
-
-    function __construct($seconds = 30)
+    function __construct($urls = false)
     {
-        set_time_limit($seconds);
+        $this->urls = $urls;
     }
 
-    /*
-     * 设置网址
-     * @list 数组
-     */
-    public function setUrlList($list = array())
+    function set_urls($urls)
     {
-        $this->url_list = $list;
+        $this->urls = $urls;
+        return $this;
     }
 
-    /*
-     * 设置参数
-     * @cutPot array
-     */
-    public function setOpt($cutPot)
+    function is_return_header($b)
     {
-        $this->curl_setopt = $cutPot + $this->curl_setopt;
+        $this->curlopt_header = $b;
+        return $this;
     }
 
-    /*
-     * 执行
-     * @return array
-     */
-    public function execute()
+    function set_method($m)
     {
-        $mh = curl_multi_init();
-        foreach ($this->url_list as $k => $url) {
-            print_r($url);
-            $conn[$k] = curl_init($url);
-            curl_setopt($conn[$k], CURLOPT_TIMEOUT, $this->timeout);//设置超时时间
-            curl_setopt($conn[$k], CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)');
-            curl_setopt($conn[$k], CURLOPT_MAXREDIRS, 7);//HTTp定向级别 ，7最高
-            curl_setopt($conn[$k], CURLOPT_HEADER, false);//这里不要header，加块效率
-            curl_setopt($conn[$k], CURLOPT_FOLLOWLOCATION, 1); // 302 redirect
-            curl_setopt($conn[$k], CURLOPT_RETURNTRANSFER,1);//要求结果为字符串且输出到屏幕上
-            curl_setopt($conn[$k], CURLOPT_HTTPGET, true);
-            curl_multi_add_handle($mh, $conn[$k]);
+        $this->medthod = strtoupper($m);
+        return $this;
+    }
+
+    function start()
+    {
+        if (!is_array($this->urls) or count($this->urls) == 0) {
+            return false;
         }
-        $active = false;
+        $curl = $text = array();
+        $handle = curl_multi_init();
+        foreach ($this->urls as $k => $v) {
+            $curl[$k] = $this->add_handle($handle, $v);
+        }
+
+        $this->exec_handle($handle);
+        foreach ($this->urls as $k => $v) {
+            $text[$k] = curl_multi_getcontent($curl[$k]);
+            curl_multi_remove_handle($handle, $curl[$k]);
+        }
+        curl_multi_close($handle);
+
+        return $text;
+    }
+
+    private function add_handle($handle, $url)
+    {
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+
+        curl_setopt($curl, CURLOPT_HEADER, $this->curlopt_header);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_multi_add_handle($handle, $curl);
+        return $curl;
+    }
+
+    private function exec_handle($handle)
+    {
+        $flag = null;
         do {
-            $mrc = curl_multi_exec($mh, $active);
-        } while ($mrc == CURLM_CALL_MULTI_PERFORM);
-        while ($active and $mrc == CURLM_OK) {
-            if (curl_multi_select($mh) != -1) {
-                do {
-                    $mrc = curl_multi_exec($mh, $active);
-                } while ($mrc == CURLM_CALL_MULTI_PERFORM);
-            }
-        }
-        $res = array();
-        foreach ($this->url_list as $i => $url) {
-            $res[$i] = curl_multi_getcontent($conn[$i]);
-            curl_close($conn[$i]);
-            curl_multi_remove_handle($mh, $conn[$i]);//释放资源
-        }
-        curl_multi_close($mh);
-        return $res;
+            curl_multi_exec($handle, $flag);
+        } while ($flag > 0);
+    }
+
+    public function get_content($url)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        return curl_exec($ch);
     }
 }
