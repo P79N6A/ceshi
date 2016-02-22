@@ -38,6 +38,7 @@ class Creeper extends CI_Controller
             log_message('debug', 'urls_new count ' . count($urls_new));
             echo "又找到了" . count($urls_new) . "个新的链接地址..." . "\n";
 
+            //拔取文件中的有用数据（下载地址）
             $this->htmlpaser->paserHtml($pages);
 
         }
