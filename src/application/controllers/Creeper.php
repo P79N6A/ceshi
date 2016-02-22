@@ -15,6 +15,9 @@ class Creeper extends CI_Controller
         $this->load->model('creeper/downloader');
         $this->load->model('creeper/htmlpaser');
 
+//        $this->url->clearUrls();
+//        exit;
+
         //通过初试链接获取合法爬取地址
         $this->url->init($start_url);
         //开始死循环
@@ -41,6 +44,8 @@ class Creeper extends CI_Controller
             //拔取文件中的有用数据（下载地址）
             $this->htmlpaser->paserHtml($pages);
 
+            //清理一下url
+            //$this->url->clearUrls();
         }
         echo 'done';
         exit();

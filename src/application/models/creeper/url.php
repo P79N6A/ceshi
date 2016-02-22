@@ -91,4 +91,18 @@ class url extends CI_Model
         }
 
     }
+
+    public function clearUrls()
+    {
+        $query = $this->db->get_where('urls');
+        $ret = $query->result_array();
+        $preg = '/^(http:\/\/www\.dytt8\.net\/|\/|http:\/\/dytt8\.net\/)?html\/[\w\/]+\/[\d]{8}\/[\d]{5}\.html$/i';
+        foreach ($ret as $url) {
+            if (preg_match($preg, $url['url'])) {
+                continue;
+            }
+            $sql = "DELETE FROM urls WHERE url_md5 = ?";
+            $this->db->query($sql, array($url['url_md5']));
+        }
+    }
 }

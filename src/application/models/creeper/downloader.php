@@ -9,7 +9,6 @@ class downloader extends CI_Model
 
     private $path;
     private $rows = 10;
-    private $preg = '/^(http:\/\/www\.dytt8\.net\/|\/|http:\/\/dytt8\.net\/)?html\/[\w\/]+\/[\d]{8}\/[\d]{5}\.html$/i';
 
     public function __construct()
     {
@@ -33,9 +32,6 @@ class downloader extends CI_Model
             //将数组分组，分批下载
             $urls_array = array_chunk($urls, $this->rows);
             foreach($urls_array as $array_key => $urls_item){
-                if (!preg_match($this->preg, $url)) {
-                    continue;
-                }
                 echo "正在下载第" . ($this->rows * $array_key + 1) . "~" . ($this->rows * ($array_key + 1)) . "的页面..." . "\n";
                 $urls_item_val = array_column($urls_item, 'url');
                 $urls_key = array_column($urls_item, 'url_md5');
