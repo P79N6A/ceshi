@@ -11,6 +11,7 @@ class htmlpaser extends CI_Model
     private $title;
     private $download_url;
     private $category;
+    private $preg = '/^(http:\/\/www\.dytt8\.net\/|\/|http:\/\/dytt8\.net\/)?html\/[\w\/]+\/[\d]{8}\/[\d]{5}\.html$/i';
 
     public function __construct()
     {
@@ -32,7 +33,7 @@ class htmlpaser extends CI_Model
         foreach ($pages as $page) {
             $html->load_file($page);
             foreach ($html->find('a') as $element) {
-                if(strpos($element->href, 'ftp:') === false){
+                if (preg_match($this->preg, $url)) {
                     if (strpos($element->href, 'http:') === false) {
                         $ret[] = 'http://www.ygdy8.net/' . $element->href;
                     } else {
@@ -56,19 +57,22 @@ class htmlpaser extends CI_Model
         $html = new simple_html_dom();
         foreach ($pages as $page) {
             $ret = array();
+            if (!preg_match($this->preg, $url)) {
+                continue;
+            }
             $html->load_file($page);
             foreach ($html->find('a') as $element) {
                 if (strpos($element->href, 'ftp:') !== false) {
                     $ret[] = $element->plaintext;
                 }
             }
-            if(empty($ret)){
+            if (empty($ret)) {
                 continue;
             }
             $this->title = $html->find('title', 0)->plaintext;
             $this->download_url = json_encode($ret);
             $cate_el = $html->find('div[class=path]', 0);
-            if(empty($cate_el)){
+            if (empty($cate_el)) {
                 continue;
             }
             $this->category = $cate_el->plaintext;
