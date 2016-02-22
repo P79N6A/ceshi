@@ -11,6 +11,8 @@ class url extends CI_Model
     public $url_md5;
     public $url;
 
+    private $preg = '/html\/[\w\/]+\/[\d]{8}\/[\d]{5}\.html$/i';
+
     public function __construct()
     {
         parent::__construct();
@@ -35,7 +37,9 @@ class url extends CI_Model
         //正则匹配url
         if ($snoopy->results) {
             foreach ($snoopy->results as $url) {
-                $this->setUrls($url);
+                if (preg_match($this->preg, $url)) {
+                    $this->setUrls($url);
+                }
             }
         }
         return 0;

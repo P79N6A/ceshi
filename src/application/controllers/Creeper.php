@@ -15,9 +15,6 @@ class Creeper extends CI_Controller
         $this->load->model('creeper/downloader');
         $this->load->model('creeper/htmlpaser');
 
-//        $this->url->clearUrls();
-//        exit;
-
         //通过初试链接获取合法爬取地址
         $this->url->init($start_url);
         //开始死循环
@@ -43,40 +40,39 @@ class Creeper extends CI_Controller
 
             //拔取文件中的有用数据（下载地址）
             $this->htmlpaser->paserHtml($pages);
-
-            //清理一下url
-            //$this->url->clearUrls();
         }
         echo 'done';
         exit();
     }
 
-    public function explode(){
+    public function explode()
+    {
         $this->load->model('creeper/app');
         $this->load->helper('file');
 
         $movies = $this->app->lists();
         $ftps = '';
-        foreach($movies as $movie){
+        foreach ($movies as $movie) {
             $download_url = json_decode($movie['download_url'], true);
-            if(count($download_url) == 1){
+            if (count($download_url) == 1) {
                 $ftps .= $download_url[0] . "\r\n";
             }
         }
-        write_file( '/Users/haicheng/developer/wwwroot/ceshi/src/cache/movies.txt', $ftps);
+        write_file('/Users/haicheng/developer/wwwroot/ceshi/src/cache/movies.txt', $ftps);
 
         echo 'done';
         unset($movies, $ftps);
     }
 
-    public function test(){
+    public function test()
+    {
 //        $urls = array("http://baidu.com", "http://sina.com.cn", "http://sohu.com");
 //        $this->load->library('multicurlclass', $urls);
 //        $data = $this->multicurlclass->start();
 //        echo var_dump($data);
         //增加多线程下载
 
-        $urls = array(1,2,3,4,5,6,7,8,9);
+        $urls = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
         $urls_array = array_chunk($urls, 4);
         var_dump($urls_array);
         exit;
