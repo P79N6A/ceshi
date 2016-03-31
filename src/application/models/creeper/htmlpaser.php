@@ -86,6 +86,63 @@ class htmlpaser extends CI_Model {
     }
 
     /**
+     * 解析html，获取其中的urls
+     *
+     * @return string
+     */
+    public function paserMenuMovieHtml($pages) {
+        if (empty($pages) || !is_array($pages)) {
+            return null;
+        }
+        $html = new simple_html_dom();
+        $ret = array();
+        foreach ($pages as $page) {
+            $html->load_file($page);
+
+            $zoom = $html->find('#Zoom', 0);
+            if (empty($zoom)) {
+                continue;
+            }
+
+            foreach ($zoom->find('a') as $element) {
+                $url = $element->plaintext;
+                preg_match('/\b(([\w-]+:\/\/?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|\/)))/', $url, $arr);
+                if (!empty($arr[1])) {
+                    $ret[] = $element->plaintext;
+                }
+            }
+        }
+
+        return $ret;
+    }
+
+    public function paserMovieHtml($pages) {
+        if (empty($pages) || !is_array($pages)) {
+            return null;
+        }
+        $html = new simple_html_dom();
+        $ret = array();
+        foreach ($pages as $page) {
+            $html->load_file($page);
+
+            $zoom = $html->find('#Zoom', 0);
+            if (empty($zoom)) {
+                continue;
+            }
+            $tables = $html->find('table');
+            foreach ($tables as $element) {
+                foreach ($element->find('a') as $elementa) {
+                    if (!empty($elementa->plaintext) && (false !== strpos( $elementa->plaintext, 'ftp') || false !== strpos( $elementa->plaintext, 'thunder'))) {
+                        $ret[] = $elementa->plaintext;
+                    }
+                }
+            }
+        }
+
+        return $ret;
+    }
+
+    /**
      * setMovie
      *
      * @param $data

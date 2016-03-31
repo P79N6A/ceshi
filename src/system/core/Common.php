@@ -871,3 +871,15 @@ if (!function_exists('get_config_file')) {
 		return empty($$config_file) ? null : $$config_file;
 	}
 }
+
+if(!function_exists("array_column"))
+{
+
+	function array_column($array,$column_name)
+	{
+
+		return array_map(function($element) use($column_name){return $element[$column_name];}, $array);
+
+	}
+
+}
