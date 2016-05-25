@@ -1,0 +1,23 @@
+<?php
+
+$str = '#戴对墨镜你就红#武大女神黄灿灿，明明可以靠脸吃饭，却是高智商的学霸，更是乐于自黑的逗逼。作为女神学霸，出行旅游，绝对少不了近视墨镜。不仅度数个人定制，款式更是瞬间秒杀全场！拥有一副黄灿灿同款墨镜，不红都难。从网红到时尚icon，就差一副近视墨镜，戴对墨镜，你就红！';
+$str2 = '#来吧冠军#小样乳酸盐杯全民冠军赛，联合微博运动，邀你一起轻运动，参与就有机会获得小样君提供的精美豪礼，奖品周周不同，有IWatch、蓝牙耳机，还有各种运动装备、红包，数量有限，赶紧行动起来吧！点击下方图片即可参与！让我们一起致敬冠军精神，挑战冠军高度，做自己的冠军!';
+var_dump(get_chinese_string_length($str));
+
+function get_chinese_string_length($string) {
+    $string = trim($string);
+
+    if ('' === $string) {
+        return 0;
+    }
+
+    $string_length = mb_strlen($string, 'UTF-8');
+
+    $chinese_string_length = mb_strlen(preg_replace('/[0-9a-z\s]+/is', '', $string), 'UTF-8');
+
+    if ($string_length === $chinese_string_length) {
+        return $string_length;
+    }
+
+    return $chinese_string_length + ceil(($string_length - $chinese_string_length) / 2);
+}
