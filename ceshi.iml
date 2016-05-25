@@ -7,5 +7,16 @@
       <excludeFolder url="file://$MODULE_DIR$/src/logs" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
