@@ -1,12 +1,14 @@
 <?php
-require_once __DIR__."/TestCase.php";
+require_once __DIR__ . "/TestCase.php";
 
 
 class ExampleTest extends TestCase {
-	public function testExample() {
-		//echo Curl::get('http://www.baidu.com');
+    public function testExample() {
+        $this->assertJson('[]', '这不是一个json');
+    }
 
-		$this->assertJson('{', '这不是一个json');
-	}
+    public function testExample2() {
+        $this->assertJson('[]', '这不是一个json');
+    }
 
 }

@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/TestCase.php";
 
-class strlengthTest extends TestCase {
+class StrlengthTest extends TestCase {
 
 
     public function testLength() {

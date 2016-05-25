@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__."/TestCase.php";
 
-class weiboTokenTest extends TestCase {
+class WeiboTokenTest extends TestCase {
 
 
     public function testToken() {
