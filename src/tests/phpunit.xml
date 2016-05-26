@@ -16,7 +16,19 @@
         <testsuite name="example">
             <directory>StackTest.php</directory>
             <directory>StrlengthTest.php</directory>
+            <directory>StubTest.php</directory>
         </testsuite>
     </testsuites>
     <!-- //测试套件 -->
+
+    <!-- 日志-->
+    <logging>
+        <log type="coverage-html" target="report" lowUpperBound="35"
+             highLowerBound="70"/>
+        <log type="coverage-clover" target="coverage.xml"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <log type="json" target="logfile.json"/>
+    </logging>
+    <!-- //日志-->
+
 </phpunit>

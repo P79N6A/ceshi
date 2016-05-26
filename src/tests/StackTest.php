@@ -1,7 +1,20 @@
 <?php
 
+/**
+ * 请添加描述
+ * Class StackTest
+ * User: ${USER}
+ * Date: ${DATE}
+ * Time: ${TIME}
+ */
 class StackTest extends TestCase {
 
+    /**
+     * 请添加描述
+     * User: ${USER}
+     * Date: ${DATE}
+     * Time: ${TIME}
+     */
     public function testGloble(){
         $this->assertEquals('user' , $GLOBALS['DB_USER']);
     }
