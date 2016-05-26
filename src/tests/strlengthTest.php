@@ -8,7 +8,7 @@ class StrlengthTest extends TestCase {
         $str = '#戴对墨镜你就红#武大女神黄灿灿，明明可以靠脸吃饭，却是高智商的学霸，更是乐于自黑的逗逼。作为女神学霸，出行旅游，绝对少不了近视墨镜。不仅度数个人定制，款式更是瞬间秒杀全场！拥有一副黄灿灿同款墨镜，不红都难。从网红到时尚icon，就差一副近视墨镜，戴对墨镜，你就红！';
 
         $len = $this->get_chinese_string_length($str);
-        $this->assertEquals(300, $len);
+        $this->assertEquals(134, $len);
     }
 
     private function get_chinese_string_length($string) {
