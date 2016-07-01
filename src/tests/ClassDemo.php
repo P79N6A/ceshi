@@ -24,13 +24,8 @@ class MyClass
         return $this->value;
     }
 
-    private function fooPrivate()
+    public function addFoo($val)
     {
-        return $this->value . ' private';
-    }
-
-    public static function fooStatic()
-    {
-        return 'static';
+        return $this->value + $val;
     }
 }

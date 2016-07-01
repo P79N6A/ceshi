@@ -18,7 +18,7 @@
             <!--<directory>MockTest.php</directory>-->
             <!--<directory>StrlengthTest.php</directory>-->
             <!--<directory>StubTest.php</directory>-->
-            <directory>PhakeTest.php</directory>
+            <directory>MockTest.php</directory>
         </testsuite>
     </testsuites>
     <!-- //测试套件 -->

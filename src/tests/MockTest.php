@@ -1,11 +1,7 @@
 <?php
 
-class Dog {
+use \Mockery as m;
 
-    function yeh(){
-
-    }
-}
 /**
  * 请添加描述
  * Class StackTest
@@ -17,7 +13,9 @@ class MockTest extends TestCase {
      */
     public function testGloble(){
 
-        $m = \Mockery::mock('Dog');
+        $m = m::mock('MyClass', array(1))->shouldReceive('foo')->andReturn(1)->getMock();
+
+        $this->assertEquals(1, $m->shouldReceive('foo'));
     }
 
 }
