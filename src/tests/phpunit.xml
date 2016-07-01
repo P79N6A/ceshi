@@ -14,9 +14,11 @@
     <!-- 测试套件 -->
     <testsuites>
         <testsuite name="example">
-            <directory>StackTest.php</directory>
-            <directory>StrlengthTest.php</directory>
-            <directory>StubTest.php</directory>
+            <!--<directory>CallbackTest.php</directory>-->
+            <!--<directory>MockTest.php</directory>-->
+            <!--<directory>StrlengthTest.php</directory>-->
+            <!--<directory>StubTest.php</directory>-->
+            <directory>PhakeTest.php</directory>
         </testsuite>
     </testsuites>
     <!-- //测试套件 -->
