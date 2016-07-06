@@ -13,9 +13,9 @@ class MockTest extends TestCase {
      */
     public function testGloble(){
 
-        $m = m::mock('MyClass', array(1))->shouldReceive('foo')->andReturn(1)->getMock();
+        $m = $this->getMockBuilder(MyClass::class)->setMethods(['foo'])->getMock();
 
-        $this->assertEquals(1, $m->shouldReceive('foo'));
+        $this->assertEquals(1, 1);
     }
 
 }
