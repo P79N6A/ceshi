@@ -2,21 +2,29 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/src/cache" />
-      <excludeFolder url="file://$MODULE_DIR$/src/logs" />
-    </content>
+    <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="PHARS">
+      <library name="PHP Runtime" type="php">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar" />
-          <root url="phar://$MODULE_DIR$/src/shell/php-cs-fixer.phar" />
+          <root url="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar" />
-          <root url="phar://$MODULE_DIR$/src/shell/php-cs-fixer.phar" />
+          <root url="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar/" />
+          <root url="phar://$MODULE_DIR$/src/shell/php-cs-fixer.phar/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar/" />
+          <root url="phar://$MODULE_DIR$/src/shell/php-cs-fixer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
