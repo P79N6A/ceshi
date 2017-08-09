@@ -15,18 +15,5 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar/" />
-          <root url="phar://$MODULE_DIR$/src/shell/php-cs-fixer.phar/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/src/shell/phpunit-4.8.24.phar/" />
-          <root url="phar://$MODULE_DIR$/src/shell/php-cs-fixer.phar/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
