@@ -21,7 +21,8 @@
     }
   ],
   "require": {
-    "overtrue/pinyin": "~3.0"
+    "overtrue/pinyin": "~3.0",
+    "hoa/bench": "~3.0"
   },
   "autoload": {
     "psr-0": {
