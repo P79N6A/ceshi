@@ -22,13 +22,17 @@
   ],
   "require": {
     "overtrue/pinyin": "~3.0",
-    "hoa/bench": "~3.0"
+    "hoa/bench": "~3.0",
+    "snoopy/snoopy": "~2.0"
   },
   "autoload": {
     "psr-0": {
     },
     "classmap": [],
-    "files": []
+    "files": [],
+    "psr-4": {
+      "Ceshi\\": "library/"
+    }
   },
   "autoload-dev": {
     "classmap": [
