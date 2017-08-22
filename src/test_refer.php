@@ -2,6 +2,10 @@
 
 require 'vendor/autoload.php';
 
+
+\Ceshi\Log::info('hello...');
+exit;
+
 $url = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback_904917625059';
 
 $header = [

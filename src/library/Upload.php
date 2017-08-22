@@ -1,5 +1,7 @@
 <?php
 
+namespace Ceshi;
+
 /**
  * File Uploading Class
  *

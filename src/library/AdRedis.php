@@ -1,4 +1,5 @@
 <?php
+namespace Ceshi;
 
 // ================= TEST DEMO =================
 
