@@ -4,3 +4,6 @@ src/vendor/*
 src/logs/*
 src/cache/*
 *.iml
+.idea/
+src/logs/
+src/vendor/
