@@ -24,7 +24,8 @@
     "overtrue/pinyin": "~3.0",
     "hoa/bench": "~3.0",
     "snoopy/snoopy": "~2.0",
-    "fzaninotto/faker": "^1.7"
+    "fzaninotto/faker": "^1.7",
+    "zircote/swagger-php": "^2.0.11"
   },
   "autoload": {
     "psr-0": {
