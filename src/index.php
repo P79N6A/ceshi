@@ -1,3 +1,9 @@
 <?php
-require_once 'vendor\autoload.php';
+
+// phpinfo();
+
+$a = 'hello';
+$b = 'world';
+
+echo $a , ' ', $b;
 
