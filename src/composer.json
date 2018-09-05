@@ -28,7 +28,8 @@
     "zircote/swagger-php": "^2.0.11",
     "workerman/workerman": "^3.5",
     "sabre/xml": "^1.5.0",
-    "guzzlehttp/guzzle": "6.3.3"
+    "guzzlehttp/guzzle": "6.3.3",
+    "nette/utils": "^2.5"
   },
   "autoload": {
     "psr-0": {
