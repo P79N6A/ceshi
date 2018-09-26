@@ -2,7 +2,7 @@
 /**
  * 数据库伪造
  */
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $faker = Faker\Factory::create('zh_CN');
 echo $faker->firstName('cui');

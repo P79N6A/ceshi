@@ -2,7 +2,7 @@
 /**
  * workerman
  */
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 
 use Workerman\Worker;
