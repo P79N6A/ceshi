@@ -20,3 +20,5 @@ if (isset($_FILES['file'])) {
 //}
 //
 //echo ord('a');
+
+echo 'A';
