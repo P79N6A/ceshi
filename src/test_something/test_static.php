@@ -1,14 +1,14 @@
 <?php
 
 class base {
-	
+
 	private static $_number = null;
-	
+
 	public function __construct() {
-		
+
 		self::$_number = 1;
 	}
-	
+
 	public function getIt() {
 		var_dump(self::$_number);
 	}
@@ -18,12 +18,11 @@ class base {
 }
 
 class a extends base{
-	
+
 }
 class b extends base{
-	
-}
 
+}
 
 $a = new a();
 $a->getIt();

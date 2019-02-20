@@ -10,6 +10,7 @@ for ($i = 0; $i < 20; $i++) {
 	echo $faker->name, "\n";
 }
 
+
 //echo $faker->company;
 //echo $faker->uuid;
 
