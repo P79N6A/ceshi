@@ -7,3 +7,4 @@ src/cache/*
 .idea/
 src/logs/
 src/vendor/
+.vscode

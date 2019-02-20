@@ -1,14 +1,25 @@
 <?php
 
+$ip = '10.0.3.193';
+
+$ip_array = explode('.', $ip);
+$bin      = '';
+foreach ($ip_array as $item) {
+    $bin .= str_pad(decbin($item), 8, '0', STR_PAD_LEFT);
+}
+echo bindec($bin);
+exit;
+
+
 $list = ['10.77.96.2/24', '10.13.4.0/24'];
-$r = IpValidator::validateList('127.0.0.1', $list);
+$r    = IpValidator::validateList('127.0.0.1', $list);
 var_dump($r);
 $r = IpValidator::validateList('10.77.96.1', $list);
 var_dump($r);
 $r = IpValidator::validateList('10.13.40.24', $list);
 var_dump($r);
 
-echo (inet_pton('172.27.1.4'));
+echo(inet_pton('172.27.1.4'));
 
 class IpValidator
 {
@@ -211,7 +222,8 @@ class IpValidator
     {
         $_ = explode("/", $pattern);
 
-        return (isset($_[0]) && isset($_[1]) && filter_var($_[0], FILTER_VALIDATE_IP) && ($_[1] <= (self::getIpType($_[0]) == 'Ipv4' ? 32 : 128)));
+        return (isset($_[0]) && isset($_[1]) && filter_var($_[0],
+                FILTER_VALIDATE_IP) && ($_[1] <= (self::getIpType($_[0]) == 'Ipv4' ? 32 : 128)));
     }
 
     private static function inetToBits($inet)

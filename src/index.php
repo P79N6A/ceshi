@@ -1,6 +1,9 @@
 <?php
 
-// phpinfo();
+/**
+ *  phpinfo();
+ * 
+ */
 
 $a = 'hello';
 $b = 'world';
