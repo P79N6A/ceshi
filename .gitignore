@@ -8,3 +8,4 @@ src/cache/*
 src/logs/
 src/vendor/
 .vscode
+/nbproject/private/
